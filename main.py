@@ -48,11 +48,11 @@ else:
 while play:    
     user_cards=[]
     computer_cards=[]
-    user_cards.append(deal_card())
-    computer_cards.append(deal_card())
-    user_cards.append(deal_card())
-    computer_cards.append(deal_card())
-    print(f"user deck {user_cards}")
+    for _ in range(2):
+        user_cards.append(deal_card())
+        computer_cards.append(deal_card())
+    print(f"User Deck {user_cards},score:{sum(user_cards)}")
+    print(f"Dealer Deck {computer_cards[0]}")
     user_cal = calculate_score(user_cards)
     comp_cal = calculate_score(computer_cards)
     if user_cal == 0:
